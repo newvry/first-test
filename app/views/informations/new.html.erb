@@ -1,4 +1,7 @@
 <%= form_for @information, url: informations_path do |f| %>
+
+<%= f.collection_select(:category_id, Category.all, :id, :name) %>
+
     <%= f.label :title, "Title" %>
     <%= f.text_field :title %>
 

@@ -1,0 +1,13 @@
+<h4>Category:</h4>
+<%= @information.category.name %>
+
+<h4>Title:</h4>
+<%= @information.title %>
+
+<h4>Content:</h4>
+<%= simple_format(@information.content) %>
+
+<h4>Create Time:</h4>
+<%= @information.created_at %>
+
+<p><%= link_to 'Back to index', informations_path %></p>
