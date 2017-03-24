@@ -1,0 +1,9 @@
+<%= form_for @information, url: information_path, method: :patch do |f| %>
+    <%= f.label :title, "Title" %>
+    <%= f.text_field :title %>
+
+    <%= f.label :content, "content" %>
+    <%= f.text_area :content %>
+
+    <%= f.submit "Update" %>
+<% end %>
