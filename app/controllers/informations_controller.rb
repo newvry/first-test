@@ -4,5 +4,25 @@ class InformationsController < ApplicationController
     @informations = Information.all
   end
 
+  def new
+    @information = Information.new
+  end
+
+  def create
+   @information = Information.new(information_params)
+    if @information.save
+      redirect_to informations_path
+    else
+      render :new
+    end
+  end
+
+
+
+  private
+
+  def information_params
+   params.require(:information).permit(:title, :content)
+  end
 
 end

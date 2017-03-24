@@ -1,0 +1,9 @@
+<%= form_for @information, url: informations_path do |f| %>
+    <%= f.label :title, "Title" %>
+    <%= f.text_field :title %>
+
+    <%= f.label :content, "content" %>
+    <%= f.text_area :content %>
+
+    <%= f.submit "Create" %>
+<% end %>
