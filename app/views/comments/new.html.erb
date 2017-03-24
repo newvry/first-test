@@ -1,0 +1,12 @@
+<%= form_for @comment, url: information_comments_path(@information) do |f| %>
+
+
+
+    <%= f.label :name, "Name" %>
+    <%= f.text_field :name %>
+
+    <%= f.label :comment, "comment" %>
+    <%= f.text_area :comment %>
+
+    <%= f.submit "Create" %>
+<% end %>

@@ -6,14 +6,16 @@
       <h4>Name:</h4>
         <%= comment.name %>
       <h4>Comment:</h4>
-        <%= comment.comment %>
+        <%= comment.comment %> <br>
 
-      <%= link_to 'Create', new_information_comment_path(@information) %>
+      <%= link_to 'Edit', edit_information_comment_path(@information, comment) %>
 
+      <%= link_to 'Del', information_comment_path(@information, comment), method: :delete %>
 
     </li>
   <% end %>
 </ul>
+<%= link_to 'Create', new_information_comment_path(@information) %>
 
 
 

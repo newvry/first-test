@@ -1,0 +1,11 @@
+<%= form_for @comment, url: information_comment_path(@information, @comment), method: :patch do |f| %>
+
+    <%= f.label :name, "Name" %>
+    <%= f.text_field :name %>
+
+    <%= f.label :comment, "comment" %>
+    <%= f.text_area :comment %>
+
+    <%= f.submit "Update" %>
+
+<% end %>
