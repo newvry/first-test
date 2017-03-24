@@ -1,0 +1,11 @@
+<ul>
+<% @informations.each do |info| %>
+  <li>
+    <%= info.title %>
+  <%= link_to 'Show', information_path(info) %>
+  <%= link_to 'Edit', edit_information_path(info) %>
+  <%= link_to 'Delete', information_path(info), method: :delete %>
+  </li>
+<% end %>
+</ul>
+<%= link_to 'New Event', new_information_path %>
