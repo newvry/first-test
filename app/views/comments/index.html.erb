@@ -1,0 +1,19 @@
+<h3>Comment</h3>
+
+<ul>
+  <% @comments.each do |comment| %>
+    <li>
+      <h4>Name:</h4>
+        <%= comment.name %>
+      <h4>Comment:</h4>
+        <%= comment.comment %>
+
+      <%= link_to 'Create', new_information_comment_path(@information) %>
+
+
+    </li>
+  <% end %>
+</ul>
+
+
+

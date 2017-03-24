@@ -10,4 +10,7 @@
 <h4>Create Time:</h4>
 <%= @information.created_at %>
 
+<h4><%= link_to 'Comment', information_comments_path(@information) %></h4>
+
+
 <p><%= link_to 'Back to index', informations_path %></p>
